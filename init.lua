@@ -11,5 +11,6 @@ dofile(dir.."meta.lua")
 dofile(dir.."minetest.lua")
 dofile(dir.."settings.lua")
 dofile(dir.."itemstack.lua")
+dofile(dir.."table.lua")
 
 dofile(dir.."extra_graph.lua")
