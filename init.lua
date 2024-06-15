@@ -3,14 +3,16 @@ test_api = {}
 
 local dir = string.sub(debug.getinfo(1).source,2,-9)
 
-print(dir)
+test_api.BLOCK_SIZE = 16
+
+--print(dir)
 
 dofile(dir.."test_api.lua")
-dofile(dir.."common.lua")
-dofile(dir.."meta.lua")
-dofile(dir.."minetest.lua")
-dofile(dir.."settings.lua")
-dofile(dir.."itemstack.lua")
-dofile(dir.."table.lua")
+
+dofile(dir.."lua_api/settings.lua")
+dofile(dir.."parameters.lua")
+
+dofile(dir.."lua_api/lua_api.lua")
+dofile(dir.."sim/sim.lua")
 
 dofile(dir.."extra_graph.lua")
