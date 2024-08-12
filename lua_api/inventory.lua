@@ -128,8 +128,8 @@ function test_api.inventory:contains_item(listname, stack, match_meta)
 end
 function test_api.inventory:remove_item(listname, stack)
   stack = ItemStack(stack)
-  remove_count = stack:get_count()
-  removed_count = 0
+  local remove_count = stack:get_count()
+  local removed_count = 0
   if self.lists[listname] then
     local list = self.lists[listname]
     for _, inv_stack in pairs(list.stacks) do
